@@ -1,0 +1,42 @@
+//
+//  PrefixHeader.pch
+//  MT_Guoke
+//
+//  Created by Austen on 16/2/15.
+//  Copyright © 2016年 mlc. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+MTCategory.h"
+#import "UIBarButtonItem+MTCategory.h"
+#import "MTConst.h"
+
+#import <Masonry.h>
+#import <MJRefresh.h>
+#import <ViewDeck.h>
+
+
+#define MTSideBackgroundColor [UIColor colorWithRed:49/255.0 green:50/255.0 blue:51/255.0 alpha:1]
+#define MTGlobalBackgroundColor [UIColor colorWithRed:231/255.0 green:233/255.0 blue:233/255.0 alpha:1]
+#define MTTitleFont [UIFont boldSystemFontOfSize:14]
+#define MTScreenWidth [UIScreen mainScreen].bounds.size.width
+#define MTScreenHeight [UIScreen mainScreen].bounds.size.height
+#define MTCollectionCellWidth (MTScreenWidth - MTEdgeInsets.left - MTEdgeInsets.right - MTColumnMargin * (MTColumnCount - 1)) / MTColumnCount
+#define MTCellCornerRadii CGSizeMake(5, 5)
+
+
+#ifdef DEBUG
+#define MTLog(...) NSLog(__VA_ARGS__)
+#else
+#define MTLog(...)
+#endif
+
+
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+
+#endif /* PrefixHeader_pch */
